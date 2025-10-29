@@ -1,0 +1,11 @@
+# Read input
+n = int(input())
+
+# Calculate square of the number
+square = n * n
+
+# Check if the square ends with the number itself
+if str(square).endswith(str(n)):
+    print("Automorphic")
+else:
+    print("Not Automorphic")
