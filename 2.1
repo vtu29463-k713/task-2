@@ -1,0 +1,17 @@
+def count_non_repeated_digits(N):
+    # Convert the number to a string to easily iterate through digits
+    digits = str(N)
+    
+    # Create a dictionary to store frequency of each digit
+    freq = {}
+    for d in digits:
+        freq[d] = freq.get(d, 0) + 1
+
+    # Count digits that appear only once
+    non_repeated_count = sum(1 for d in freq if freq[d] == 1)
+    
+    return non_repeated_count
+
+# Example usage
+N = int(input("Enter a number: "))
+print(count_non_repeated_digits(N))
